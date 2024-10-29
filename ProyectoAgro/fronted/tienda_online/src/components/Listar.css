@@ -1,0 +1,77 @@
+/* Estilos para Listar.js */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #c4c635;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #d9e0de;
+    border-left: 5px solid transparent;
+    transition: border-left 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+    background-color: #f0f8ff;
+    border-left: 5px solid #c4c635;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Mensaje de carga */
+p.loading {
+    font-size: 1.3em;
+    color: #888;
+}

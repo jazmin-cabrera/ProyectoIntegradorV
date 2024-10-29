@@ -1,0 +1,71 @@
+/* Estilos para SubirImagen.js */
+
+.subir-imagen-container {
+    background-color: #f7f9fb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.subir-imagen-container h2 {
+    color: #9cb2c9;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.subir-imagen-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subir-imagen-container input[type="file"] {
+    background-color: #fff;
+    border: 2px solid #21568e;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.subir-imagen-container input[type="file"]:hover {
+    background-color: #f0f8ff;
+}
+
+.subir-imagen-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subir-imagen-container button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.subir-imagen-container button:active {
+    background-color: #1e7e34;
+}
+
+.subir-imagen-container p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.subir-imagen-container p[style*="color: red"] {
+    color: #dc3545 !important;
+}
+
+.subir-imagen-container p[style*="color: green"] {
+    color: #28a745 !important;
+}

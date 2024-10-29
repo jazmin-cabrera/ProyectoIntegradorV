@@ -1,0 +1,99 @@
+/* Estilos para Crear.js */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #aac2dc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="text"],
+textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #00ff11;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 20px 0;
+    text-align: center;
+    color: #007bff;
+}
+
+p {
+    font-size: 1.1em;
+    text-align: center;
+    color: #555;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegura que los divs tengan un margen inferior */
+div {
+    margin-bottom: 20px;
+}
+
+/* Contenedor de botones centrado con espacio entre ellos */
+.boton-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.subirImagen {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #859F3D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Elimina propiedades innecesarias de flex */
+    margin-top: 20px;  /* Espacio superior adicional */
+}
+
+.subirImagen:hover {
+    background-color: #859F3D; /* Cambia el fondo al pasar el ratón */
+    transform: translateY(-3px); /* Pequeño desplazamiento al pasar el ratón */
+}
