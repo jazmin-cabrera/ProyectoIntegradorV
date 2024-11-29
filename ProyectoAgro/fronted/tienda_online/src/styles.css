@@ -110,3 +110,23 @@ li:hover {
         font-size: 1.2em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
     }
 }
+/* Botón de cerrar sesión */
+.logout-button {
+    background-color: #859F3D; /* Mismo fondo que la barra de navegación */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Mano al pasar el ratón */
+    font-family: HeadingNowVariable, sans-serif;
+    font-variation-settings: "wdth" 825, "wght" 700;
+    font-size: 1.5em; /* Tamaño del texto */
+    transition: all 0.3s ease; /* Transición suave */
+    
+}
+
+/* Hover del botón de cerrar sesión */
+.logout-button:hover {
+    color: #ffdd57; /* Texto oscuro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}

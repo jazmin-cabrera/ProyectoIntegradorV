@@ -1,7 +1,7 @@
 /* Estilos para SubirImagen.js */
 
 .subir-imagen-container {
-    background-color: #f7f9fb;
+    background-color: #f06, #0bc549;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -11,7 +11,7 @@
 }
 
 .subir-imagen-container h2 {
-    color: #9cb2c9;
+    color: #f06, #0bc549;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -23,8 +23,8 @@
 }
 
 .subir-imagen-container input[type="file"] {
-    background-color: #fff;
-    border: 2px solid #21568e;
+    background-color: #f06, #0bc549;
+    border: 2px solid rgb(164, 6, 69), #0bc549;
     padding: 10px;
     font-size: 1.1em;
     border-radius: 6px;
@@ -34,12 +34,12 @@
 }
 
 .subir-imagen-container input[type="file"]:hover {
-    background-color: #f0f8ff;
+    background-color: #f06, #0bc549;
 }
 
 .subir-imagen-container button {
     background-color: #28a745;
-    color: white;
+    color:#f06, #0bc549;
     padding: 10px 20px;
     font-size: 1.1em;
     border: 2px solid transparent;

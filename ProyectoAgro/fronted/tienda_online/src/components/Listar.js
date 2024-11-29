@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Listar.css'
+import './Listar.css';
 
-const Listar = () => {
+const Listar = ({ role }) => { // Recibir el rol como prop
     const [articulos, setArticulos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
@@ -36,22 +36,37 @@ const Listar = () => {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div>
-            <h1>Listar artículos</h1>
+        <div className="listar-container">
+            <h1>Productos Disponibles</h1>
             <input
                 type="text"
-                placeholder="Buscar artículos..."
+                placeholder="Buscar productos..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
             />
-            <ul>
+            <div className="productos-grid">
                 {articulosFiltrados.map((articulo) => (
-                    <li key={articulo._id}>
-                        <Link to={`/aticulo/${articulo._id}`}>{articulo.titulo}</Link>
-                    </li>
+                    <div className="producto-card" key={articulo._id}>
+                        {/* Construcción de la URL para mostrar la imagen */}
+                        {articulo.imagen && (
+                            <img
+                                src={`http://localhost:3900/api/imagen/${articulo.imagen}`}
+                                alt={articulo.titulo}
+                                className="producto-imagen"
+                            />
+                        )}
+                        <h3 className="producto-titulo">{articulo.titulo}</h3>
+                        <p className="producto-contenido">{articulo.contenido}</p>
+                        {/* Mostrar el botón "Ver más" solo si el rol no es "usuario" */}
+                        {role !== "user" && (
+                            <Link to={`/aticulo/${articulo._id}`} className="producto-link">
+                                Ver más
+                            </Link>
+                        )}
+                    </div>
                 ))}
-            </ul>
-            {articulosFiltrados.length === 0 && <p>No se encontraron artículos que coincidan con la búsqueda.</p>}
+            </div>
+            {articulosFiltrados.length === 0 && <p>No se encontraron productos que coincidan con la búsqueda.</p>}
         </div>
     );
 };

@@ -1,8 +1,9 @@
+// MostrarArticulo.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import SubirImagen from './subirImagen'; // Importa el componente SubirImagen
-import './MostrarArticulo.css';
+import './MostrarArticulo.css'; // Estilos actualizados
 
 const MostrarArticulo = () => {
     const { id } = useParams(); // Obtener el ID del artículo de la URL
@@ -52,22 +53,33 @@ const MostrarArticulo = () => {
     }
 
     return (
-        <div>
+        <div className="mostrar-articulo-container">
             <h1>{articulo.titulo}</h1>
             <p>{articulo.contenido}</p>
             {articulo.imagen && (
-                <img src={`http://localhost:3900/api/imagen/${articulo.imagen}`} alt={articulo.titulo} />
+                <div className="imagen-container">
+                    <img
+                        src={`http://localhost:3900/api/imagen/${articulo.imagen}`}
+                        alt={articulo.titulo}
+                        className="mostrar-articulo-imagen"
+                    />
+                </div>
             )}
             <p><strong>Fecha:</strong> {new Date(articulo.fecha).toLocaleDateString()}</p>
 
             {/* Componente para subir imagen */}
-            <SubirImagen articuloId={id} onImageUpload={manejarSubirImagen} /> {/* Añadir botón para subir imagen */}
+            <SubirImagen articuloId={id} onImageUpload={manejarSubirImagen} />
 
             {/* Botones de editar y borrar */}
-            <div className='subir-imagen-container'>
-                <button onClick={() => navigate(`/editar/${articulo._id}`)} className='subirImagen'>Editar</button>
-                <button onClick={()=> navigate(`/borrar/${articulo._id}`)} className='borrarImagen'>Borrar</button>
-            </div>
+            <div className="botones-container">
+    <button onClick={() => navigate(`/editar/${articulo._id}`)} className="editarImagen">
+        Editar
+    </button>
+    <button onClick={() => navigate(`/borrar/${articulo._id}`)} className="borrarImagen">
+        Borrar
+    </button>
+</div>
+
         </div>
     );
 };

@@ -47,7 +47,7 @@ const Crear = ({ onArticuloCreado }) => {
 
     return (
         <div>
-            <h1>Crear Artículo</h1>
+            <h1>Crear Producto</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -62,7 +62,7 @@ const Crear = ({ onArticuloCreado }) => {
                     onChange={(e) => setContenido(e.target.value)}
                     required
                 />
-                <button type="submit" className='subirImagen'>Crear Artículo</button>
+                <button type="submit" className='subirImagen'>Crear Producto</button>
             </form>
 
             {/* Mostrar el componente de subir imagen solo si el artículo ya fue creado */}

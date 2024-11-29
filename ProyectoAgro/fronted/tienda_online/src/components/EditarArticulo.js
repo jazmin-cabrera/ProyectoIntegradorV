@@ -47,7 +47,7 @@ const EditarArticulo = () => {
 
     return (
         <div>
-            <h1>Editar Artículo</h1>
+            <h1>Editar Producto</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
